@@ -41,8 +41,30 @@ class Airplane {
 */
 
 class Person {
+  constructor(name, age){
+      this.name = name;
+      this.age = age;
+      this.stomach = [];
+  }
+
+eat (someFood){
+  if(this.stomach.length < 10){
+    this.stomach.push(someFood);
+
+  }
+}
+poop(){
+  this.stomach =[];
+}
+toString(){
+  return `${this.name}, ${this.age}`;
 
 }
+}
+const person1 = new Person ('Bill', 24);
+person1.eat('Pizza');
+person1.poop();
+person1.toString();
 
 /*
   TASK 2
@@ -58,9 +80,15 @@ class Person {
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
 
-class Car {
-
+// class Car {
+Car.prototype.drive = function(distance){
+  if (distance >= (this.tank * this.milesPerGallon)){
+    this.odometer = this.odometer + (this.tank * this.milesPerGallon);
+    this.tank = 0
+    return `I ran out of fuel at ${this.odometer} miles!`;
+  }
 }
+const 
 
 /*
   TASK 3
@@ -75,6 +103,8 @@ class Car {
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
+  constructor(attributes)}
+  thi
 
 }
 
@@ -92,9 +122,33 @@ class Lambdasian {
         + `demo` receives a `subject` string as an argument and returns the phrase 'Today we are learning about {subject}' where subject is the param passed in.
         + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
 */
-class Instructor {
 
+class Instructor extends Lambdasiam {
+constructor(speciality, favLanguage, catchPhrase){
+super(attributes);
+this.speciality = speciality; 
+this.favLanguage = favLanguage;
+this.catchPhrase = catchPhrase;
 }
+demo (subject){
+  return `Today we are learning about ${subject}`
+};
+grade (student, subject){
+  return `${student.name} recieves a perfect score on ${subject}`
+};
+
+const instructor1 = new instructor({
+  name: 'Bob';
+  age: 53,
+  location: Missouri,
+  speciality: history,
+  fav Language: French,
+  catchPhrase: 'It is what it is'
+});
+instuctor.demo('python'); 
+
+
+
 
 /*
   TASK 5
