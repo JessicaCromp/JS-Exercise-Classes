@@ -81,14 +81,7 @@ person1.toString();
 */
 
 // class Car {
-Car.prototype.drive = function(distance){
-  if (distance >= (this.tank * this.milesPerGallon)){
-    this.odometer = this.odometer + (this.tank * this.milesPerGallon);
-    this.tank = 0
-    return `I ran out of fuel at ${this.odometer} miles!`;
-  }
-}
-const 
+
 
 /*
   TASK 3
